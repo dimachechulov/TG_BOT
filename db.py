@@ -75,7 +75,8 @@ class Sqliter:
 
 
     def add_film(self,data):
-        self.cursor.execute('INSERT INTO films (code, name, date, dlitel, description, poster) VALUES (?, ?, ?, ?, ?, ?)',data)
+        data[5] = sqlite3.Binary(data[5])
+        self.cursor.execute('INSERT INTO films (code, name, date, dlitel, description,poster) VALUES (?, ?, ?, ?, ?,?)',data)
         self.db.commit()
 
     def get_film(self,film_id):
@@ -118,7 +119,7 @@ class Sqliter:
         cur = con.cursor()
         with con:
             cur = con.cursor()
-            cur.execute("SELECT cast(poster as TEXT) as poster FROM films")
+            cur.execute("SELECT cast(poster as BLOB) as poster FROM films")
         posters = [row[0] for row in cur.fetchall()]
         data = []
         for i in range(len(codes)):
@@ -144,6 +145,7 @@ class Sqliter:
         self.db.commit()
 
     def add_series(self,data):
+        data[5] = sqlite3.Binary(data[5])
         self.cursor.execute('INSERT INTO series (code, name, date, dlitel, description, poster) VALUES (?, ?, ?, ?, ?, ?)',data)
         self.db.commit()
 
@@ -153,6 +155,7 @@ class Sqliter:
         return result
 
     def get_series1(self):
+
         con = sqlite3.connect("database.db")
         cur = con.cursor()
         with con:
@@ -187,7 +190,7 @@ class Sqliter:
         cur = con.cursor()
         with con:
             cur = con.cursor()
-            cur.execute("SELECT cast(poster as TEXT) as poster FROM series")
+            cur.execute("SELECT cast(poster as BLOB) as poster FROM series")
         posters = [row[0] for row in cur.fetchall()]
         data = []
         for i in range(len(codes)):
@@ -215,7 +218,6 @@ class Sqliter:
         self.db.commit()
 
     def add_chanel(self,data):
-        print(data)
         self.cursor.execute('INSERT INTO chanels (name,id,url) VALUES (?,?,?)',data)
         self.db.commit()
     def get_chanels(self):

@@ -4,7 +4,7 @@ import config
 from main import db
 inlinekeyboard = InlineKeyboardMarkup()
 inlinekeyboard.add(InlineKeyboardButton(text="🔍 Поиск по коду", callback_data="poisk"))
-inlinekeyboard.add(InlineKeyboardButton(text="Рандомный фильм/сериал", callback_data="random"))
+inlinekeyboard.add(InlineKeyboardButton(text=" 🎲 Рандомный фильм/сериал", callback_data="random"))
 inlinekeyboard.add(InlineKeyboardButton(text="💬 Контакты", callback_data="contacts"))
 
 news_menu_kb = InlineKeyboardMarkup()
@@ -77,29 +77,29 @@ Admin = InlineKeyboardMarkup(
 inline_keyboard = [
 
     [
-        InlineKeyboardButton(text="Добавление\n фильма", callback_data="add_film"),
-        InlineKeyboardButton(text="Добавление сериала", callback_data="add_series"),
+        InlineKeyboardButton(text="➕ Добавление\n фильма", callback_data="add_film"),
+        InlineKeyboardButton(text="➕ Добавление сериала", callback_data="add_series"),
     ],
     [
 
-        InlineKeyboardButton(text="Добавление админа", callback_data="add_admin"),
-        InlineKeyboardButton(text="Добавление канала", callback_data="add_chanel"),
+        InlineKeyboardButton(text="➕ Добавление админа", callback_data="add_admin"),
+        InlineKeyboardButton(text="➕ Добавление канала", callback_data="add_chanel"),
     ],
-    [ InlineKeyboardButton(text="Просмотр имеющиеся фильмов", callback_data="get_film"),
-      InlineKeyboardButton(text="Просмотр имеющиеся сериалов", callback_data="get_series"),
+    [ InlineKeyboardButton(text="👁️ Просмотр имеющиеся фильмов", callback_data="get_film"),
+      InlineKeyboardButton(text="👁️ Просмотр имеющиеся сериалов", callback_data="get_series"),
 
       ],
     [
-      InlineKeyboardButton(text="Просмотр имеющиеся админов", callback_data="get_admin"),
-      InlineKeyboardButton(text="Просмотр имеющиеся каналов", callback_data="get_chanel"),
+      InlineKeyboardButton(text="👁️ Просмотр имеющиеся админов", callback_data="get_admin"),
+      InlineKeyboardButton(text="👁️ Просмотр имеющиеся каналов", callback_data="get_chanel"),
     ],
-      [InlineKeyboardButton(text="Удаление фильма", callback_data="del_film"),
-       InlineKeyboardButton(text="Удаление сериала", callback_data="del_series"),
+      [InlineKeyboardButton(text="❌ Удаление фильма", callback_data="del_film"),
+       InlineKeyboardButton(text="❌ Удаление сериала", callback_data="del_series"),
 
 ],
     [
-        InlineKeyboardButton(text="Удаление админа", callback_data="del_admin"),
-        InlineKeyboardButton(text="Удаление канала", callback_data="del_chanel"),
+        InlineKeyboardButton(text="❌ Удаление админа", callback_data="del_admin"),
+        InlineKeyboardButton(text="❌ Удаление канала", callback_data="del_chanel"),
     ],
 
       [InlineKeyboardButton(text="◀️ Назад", callback_data="back"),]
@@ -110,30 +110,30 @@ inline_keyboard = [
 AdminError = InlineKeyboardMarkup()
 AdminError.add(InlineKeyboardButton(text="🏠 Меню", callback_data="back"))
 film_back = InlineKeyboardMarkup()
-film_back.add(InlineKeyboardButton(text="Повторить попытку", callback_data="add_film"))
+film_back.add(InlineKeyboardButton(text="🔄 Повторить попытку", callback_data="add_film"))
 series_back = InlineKeyboardMarkup()
-series_back.add(InlineKeyboardButton(text="Повторить попытку", callback_data="add_series"))
+series_back.add(InlineKeyboardButton(text="🔄 Повторить попытку", callback_data="add_series"))
 chanel_back = InlineKeyboardMarkup()
-chanel_back.add(InlineKeyboardButton(text="Повторить попытку", callback_data="add_chanel"))
+chanel_back.add(InlineKeyboardButton(text="🔄 Повторить попытку", callback_data="add_chanel"))
 chanel_back1 = InlineKeyboardMarkup()
-chanel_back1.add(InlineKeyboardButton(text="Повторить попытку", callback_data="del_chanel"))
+chanel_back1.add(InlineKeyboardButton(text="🔄 Повторить попытку", callback_data="del_chanel"))
 film_back1 = InlineKeyboardMarkup()
-film_back1.add(InlineKeyboardButton(text="Повторить попытку", callback_data="del_film"))
+film_back1.add(InlineKeyboardButton(text="🔄 Повторить попытку", callback_data="del_film"))
 series_back1 = InlineKeyboardMarkup()
-series_back1.add(InlineKeyboardButton(text="Повторить попытку", callback_data="del_series"))
+series_back1.add(InlineKeyboardButton(text="🔄 Повторить попытку", callback_data="del_series"))
 admin_back1 = InlineKeyboardMarkup()
-admin_back1.add(InlineKeyboardButton(text="Повторить попытку", callback_data="del_admin"))
+admin_back1.add(InlineKeyboardButton(text="🔄 Повторить попытку", callback_data="del_admin"))
 Admin_back = InlineKeyboardMarkup()
-Admin_back.add(InlineKeyboardButton(text="Повторить попытку", callback_data="add_admin"))
+Admin_back.add(InlineKeyboardButton(text="🔄 Повторить попытку", callback_data="add_admin"))
 Admin_back1 = InlineKeyboardMarkup()
-Admin_back1.add(InlineKeyboardButton(text="Отмена", callback_data="back"))
+Admin_back1.add(InlineKeyboardButton(text="❌ Отмена", callback_data="back"))
 
 
 search_back = InlineKeyboardMarkup()
 search_back.add(InlineKeyboardButton(text="◀️ Назад", callback_data="poisk"))
 search = InlineKeyboardMarkup()
-search.add(InlineKeyboardButton(text="Поиск сериала", callback_data="search_series"))
-search.add(InlineKeyboardButton(text="Поиск фильма", callback_data="search_films"))
+search.add(InlineKeyboardButton(text="🔍 Поиск сериала", callback_data="search_series"))
+search.add(InlineKeyboardButton(text="🔍 Поиск фильма", callback_data="search_films"))
 search.add(InlineKeyboardButton(text="◀️ Назад", callback_data="back"))
 
 go_poisk = InlineKeyboardMarkup()
@@ -145,9 +145,9 @@ def get_chanels():
     checkSubMenu = InlineKeyboardMarkup(row_width=1)
     CHANELS = db.get_chanels()
     for chanel in CHANELS:
-        btn = InlineKeyboardButton(text=chanel[0], url=chanel[2])
+        btn = InlineKeyboardButton(text= chanel[0], url=chanel[2])
         checkSubMenu.insert(btn)
-    btn = InlineKeyboardButton(text="Я подписался!",callback_data="subchanneldone")
+    btn = InlineKeyboardButton(text="✅ Я подписался!",callback_data="subchanneldone")
     checkSubMenu.insert(btn)
     return checkSubMenu
 
